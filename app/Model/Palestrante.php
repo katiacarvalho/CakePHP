@@ -10,9 +10,15 @@ class Palestrante extends AppModel{
     
     public $validate = array(
         
-        'nome' => array(            
+        'nome' => array( 
+            array(
+                'rule' => 'isUnique',
+                'message' => 'O nome informado já existe'
+            ),
+            array(
                 'rule' => 'notEmpty',
-                'message' => 'Informe seu nome'                        
+                'message' => 'Informe seu nome'
+            )
         ),
         'descricao' => array(
             'rule' => 'notEmpty',
