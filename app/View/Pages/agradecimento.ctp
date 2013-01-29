@@ -1,0 +1,1 @@
+<p>Muito obrigada pela sua inscrição</p>
